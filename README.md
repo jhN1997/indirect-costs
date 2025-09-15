@@ -37,19 +37,19 @@ npm run dev
 
 La app estará disponible en: http://localhost:5173
 
-📂 Estructura del proyecto
-
+## 📂 Estructura del proyecto
 proyecto/
-├── backend/        # API GraphQL con Node + Prisma
-│   ├── prisma/     # Esquema y migraciones
-│   ├── src/        # Código fuente del servidor
-│   └── package.json
+│── backend/              # API GraphQL con Node + Prisma  
+│   │── prisma/           # Esquema y migraciones  
+│   │── src/              # Código fuente del servidor  
+│   │── package.json  
 │
-├── frontend/       # React + Apollo Client
-│   ├── src/        # Código fuente del frontend
-│   └── package.json
+│── frontend/             # React + Apollo Client  
+│   │── src/              # Código fuente del frontend  
+│   │── package.json  
 │
-└── README.md
+│── README.md
+
 
 🚀 Scripts útiles
 Backend
