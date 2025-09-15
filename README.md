@@ -2,11 +2,13 @@ Proyecto Fullstack: Costos Indirectos
 Este proyecto está dividido en dos carpetas principales:
 - backend/ → API GraphQL con Node.js, Apollo Server, Prisma y MySQL.
 - frontend/ → Aplicación React con Apollo Client y Material React Table.
+
 📦 Requisitos previos
 - Node.js v18+
 - npm o yarn
 - Docker (opcional, si usas docker-compose para la DB)
 - Una base de datos MySQL en local o en la nube.
+
 ⚙️ Backend
 1. Variables de entorno
 En la carpeta backend/ crea un archivo .env con el siguiente contenido:
@@ -22,6 +24,7 @@ npx prisma migrate dev --name init
 npm run dev
 
 El backend estará disponible en: http://localhost:3000/graphql
+
 🖥️ Frontend
 1. Instalar dependencias
 cd frontend
@@ -33,6 +36,7 @@ VITE_GRAPHQL_ENDPOINT=http://localhost:3000/graphql
 npm run dev
 
 La app estará disponible en: http://localhost:5173
+
 📂 Estructura del proyecto
 
 proyecto/
@@ -55,11 +59,13 @@ Backend
 Frontend
 - npm run dev → Inicia el servidor de desarrollo.
 - npm run build → Compila la app para producción.
+
 🧑‍💻 Flujo de desarrollo
 1. Corre el backend (npm run dev en /backend).
 2. Corre el frontend (npm run dev en /frontend).
 3. Abre la app en el navegador y comienza a usarla.
 4. Usa Apollo Client DevTools o GraphQL Playground para probar queries/mutations.
+
 ✨ Notas
 - Si quieres levantar todo con Docker, puedes configurar un docker-compose.yml para la DB y el backend.
 - Prisma genera automáticamente los tipos de TS según el schema de tu base de datos.
