@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "rootDirs": ["src"],
+    "lib": ["es2023"],
+    "target": "es2023",
+    "esModuleInterop": true,
+    "types": ["node"]
+  },
+  "include": ["src", "prisma"]
+}

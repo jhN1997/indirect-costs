@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+/**
+ * NOTE on MySQL/MariaDB:
+ * - For UNIQUE indexed text columns with utf8mb4, keep length <= 191 bytes.
+ *   We explicitly set @db.VarChar(191) on unique fields to avoid index size issues.
+ * - Decimal mapping uses @db.Decimal(precision, scale).
+ */
+
+model Plant {
+  id        Int         @id @default(autoincrement())
+  name      String
+  code      String      @unique
+  address   String
+  operations Operation[]
+}
+
+model Operation {
+  id          Int           @id @default(autoincrement())
+  name        String
+  plant       Plant         @relation(fields: [plantId], references: [id])
+  plantId     Int
+  cost        CostIndirect? @relation("OneToOneCostIndirect")
+}
+
+model CostIndirect {
+  id          Int      @id @default(autoincrement())
+  operation   Operation @relation("OneToOneCostIndirect", fields: [operationId], references: [id])
+  operationId Int       @unique
+
+  KG_300   Float?
+  KG_500   Float?
+  TN_1     Float?
+  TN_3     Float?
+  TN_5     Float?
+  TN_10    Float?
+  TN_20    Float?
+  TN_30    Float?
+}
