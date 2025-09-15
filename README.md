@@ -1,4 +1,5 @@
-Proyecto Fullstack: Costos Indirectos
+#Proyecto Fullstack: Costos Indirectos
+
 Este proyecto está dividido en dos carpetas principales:
 - backend/ → API GraphQL con Node.js, Apollo Server, Prisma y MySQL.
 - frontend/ → Aplicación React con Apollo Client y Material React Table.
@@ -36,20 +37,6 @@ VITE_GRAPHQL_ENDPOINT=http://localhost:3000/graphql
 npm run dev
 
 La app estará disponible en: http://localhost:5173
-
-## 📂 Estructura del proyecto
-proyecto/
-│── backend/              # API GraphQL con Node + Prisma  
-│   │── prisma/           # Esquema y migraciones  
-│   │── src/              # Código fuente del servidor  
-│   │── package.json  
-│
-│── frontend/             # React + Apollo Client  
-│   │── src/              # Código fuente del frontend  
-│   │── package.json  
-│
-│── README.md
-
 
 🚀 Scripts útiles
 Backend
