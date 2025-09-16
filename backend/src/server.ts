@@ -1,11 +1,10 @@
-// src/server.ts
 import { ApolloServer } from "@apollo/server";
 import { expressMiddleware } from "@as-integrations/express5";
 import bodyParser from "body-parser";
 import cors from "cors";
 import express from "express";
-import { resolvers } from "./resolvers"; // <- named import
-import { typeDefs } from "./schema"; // <- named import
+import { resolvers } from "./resolvers";
+import { typeDefs } from "./schema";
 
 async function bootstrap() {
   const app = express();

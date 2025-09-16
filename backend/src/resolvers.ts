@@ -14,7 +14,7 @@ type CostIndirectInput = {
 };
 
 type UpsertOperationInput = {
-  id?: string | number; // Puede venir como string desde GraphQL
+  id?: string | number;
   name: string;
   cost?: CostIndirectInput;
 };

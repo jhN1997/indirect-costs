@@ -14,7 +14,7 @@ const CostosIndirectosPage = ({
   plantId,
   onUpdateSuccess,
 }: Props) => {
-  const theme = useTheme(); //replace with your theme/createTheme
+  const theme = useTheme();
 
   return (
     <div>

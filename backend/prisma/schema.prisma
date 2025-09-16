@@ -8,13 +8,6 @@ datasource db {
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
-/**
- * NOTE on MySQL/MariaDB:
- * - For UNIQUE indexed text columns with utf8mb4, keep length <= 191 bytes.
- *   We explicitly set @db.VarChar(191) on unique fields to avoid index size issues.
- * - Decimal mapping uses @db.Decimal(precision, scale).
- */
-
 model Plant {
   id        Int         @id @default(autoincrement())
   name      String
