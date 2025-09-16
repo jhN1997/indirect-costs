@@ -3,6 +3,7 @@
 ## 📂 Estructura del proyecto
 
 proyecto/
+│
 │── backend/ # API GraphQL con Node + Prisma  
 │ │── prisma/ # Esquema y migraciones  
 │ │── src/ # Código fuente del servidor  
@@ -13,7 +14,8 @@ proyecto/
 │ │── package.json  
 │
 │── docker-compose.yml # Configuración de contenedor MariaDB  
-│── README.md  
+│── README.md
+
 Este proyecto está dividido en dos carpetas principales:
 
 - backend/ → API GraphQL con Node.js, Apollo Server, Prisma y MySQL.
